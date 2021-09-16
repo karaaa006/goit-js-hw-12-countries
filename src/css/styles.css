@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -55,10 +58,13 @@ ul {
 }
 
 .custom-container {
+  display: flex;
+  align-items: center;
   padding: 25px;
   border: 5px solid rgba(255, 0, 0, 0.7);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   color: #000000;
+  gap: 25px;
 }
 
 .custom-title {
@@ -66,9 +72,12 @@ ul {
   margin-bottom: 10px;
 }
 
+.custom-content {
+  flex-grow: 1;
+}
+
 .custom-icon {
-  margin-left: auto;
-  width: 25px;
+  min-width: 25px;
 }
 
 /* Background animation */

@@ -1,6 +1,5 @@
 import debounce from "lodash.debounce";
-import { error, defaults } from "@pnotify/core";
-// import "@pnotify/core/dist/BrightTheme.css";
+import { error } from "@pnotify/core";
 import findCountries from "./fetchCountries";
 
 const inputRef = document.querySelector('[name="country-name"]');
@@ -54,7 +53,6 @@ const renderCountries = (searchQuery) => {
         styling: "custom",
         sticker: false,
         closer: false,
-        // icon: "far fa-file-image fa-3x",
       });
     });
 };

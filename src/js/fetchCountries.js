@@ -7,6 +7,6 @@ export default function (searchQuery) {
     if (response.status === 200) {
       return response.json();
     }
-    throw new Error("Not found!");
+    throw new Error("404 - Not found!");
   });
 }
