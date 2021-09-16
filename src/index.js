@@ -1,3 +1,4 @@
 import css from "./css/styles.css";
+import "@pnotify/core/dist/BrightTheme.css";
 
-import "./js/fetchCountries";
+import "./js/countriesRender.js";
