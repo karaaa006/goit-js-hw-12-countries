@@ -1,3 +1,15 @@
+@media screen and (max-width: 768px) {
+  .country-info {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .custom-elem {
+    top: auto;
+    bottom: 25px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +18,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   color: #ffffff;
+  background-color: #8f94fb;
 }
 
 ul {
@@ -15,6 +28,8 @@ ul {
 }
 
 .container {
+  max-height: 100vh;
+  overflow: auto;
   position: relative;
   text-align: center;
   padding: 20px;
@@ -23,11 +38,14 @@ ul {
 }
 
 .country-name-input {
+  max-width: 90%;
   padding: 10px;
   font-size: 20pt;
   border: 2px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
+  outline: 0px solid transparent;
+  transition: outline ease 150ms;
 }
 .country-name-input:focus {
   outline: 5px solid #8f94fb;
@@ -37,11 +55,24 @@ ul {
   padding: 10px;
 }
 
+.country {
+  cursor: pointer;
+  transition: color ease 150ms;
+}
+
+.country:hover {
+  color: #8f94fb;
+}
+
+.country img {
+  width: 25px;
+  margin-right: 10px;
+}
+
 .country-info {
   display: flex;
   margin-top: 50px;
   justify-content: center;
-  align-items: center;
   gap: 15%;
 }
 
@@ -51,6 +82,34 @@ ul {
   padding: 5px;
   background-color: #ffffff;
 }
+
+.more-btn {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 20pt;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  outline: 0px solid transparent;
+  transition: outline ease 150ms, padding ease 150ms;
+}
+
+.more-btn:hover {
+  outline: 5px solid #8f94fb;
+}
+
+.more-btn:disabled {
+  padding: 5px 10px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.more-btn:disabled:hover {
+  outline-color: transparent;
+}
+
+/* Notification */
 
 .custom-elem {
   position: fixed;
